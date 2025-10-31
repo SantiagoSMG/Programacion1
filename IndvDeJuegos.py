@@ -1,3 +1,13 @@
+while True:
+     print("""
+    1.- Comprar un juego
+    2.- Devolver un juego
+    4.- Ver eslogan
+    3.- Salir
+    """)
+     break
+op = input("Selecciona una opción: ")
+
 info_tienda = {
     'eslogan': 'Game On!',
     'Año de fundación': 2010 
