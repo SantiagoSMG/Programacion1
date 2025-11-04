@@ -23,6 +23,8 @@ while True:
             else:
                 resultado += "\033[1;31m"+letra+"\033[0;30m"
             indice+=1
+        if correctas == 5:
+         break
         print(resultado)
     if correctas == 5:
             print(f"Felicidades la palabra era \033[1;32m{palabra}\033[0;30m has acertado.")
