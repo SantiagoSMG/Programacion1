@@ -4,9 +4,9 @@ while True:
     palabra = palabras[random.randint(0,len(palabras)-1)]
     wordle = list(palabra)
     print("""\033[1;37;44m
-====================================[WORDLE]=======================================
-    Bienvenido ya he elegido la palabra secreta. Tienes 5 intentos para adivinarla.
-===================================================================================
+====================================[WORDLE]======================================
+   Bienvenido ya he elegido la palabra secreta. Tienes 5 intentos para adivinarla.
+==================================================================================
 \033[0;30;47m""")
     
     for i in range(5):
