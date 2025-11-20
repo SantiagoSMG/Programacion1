@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import messagebox
-from tkinter import ttk
 
 def mostrar_genero(genero,lista_peliculas,catalogo):
     # limpiar la lista
