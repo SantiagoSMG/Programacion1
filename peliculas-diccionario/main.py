@@ -43,7 +43,7 @@ sidebar.pack(side="left", fill="y")
 brand = ttk.Label(sidebar, text="PELÍCULAS", style="Brand.TLabel")
 brand.pack(pady=(16, 10), padx=12)
 
-# frames that will be passed around
+# marcos que se pasarán alrededor
 main_area = tk.Frame(container, bg="#1B1B1B")
 main_area.pack(side="left", fill="both", expand=True)
 
@@ -52,32 +52,32 @@ header.pack(fill="x", pady=10, padx=12)
 title = tk.Label(header, text="Catálogo Multimedia", bg="#1B1B1B", fg="#ffffff", font=("Segoe UI", 22, "bold"))
 title.pack(side="left", anchor="w")
 
-# Search UI
+# Buscar UI
 search_frame = tk.Frame(header, bg="#1B1B1B")
 search_frame.pack(side="right")
 entry_search = tk.Entry(search_frame, width=28, font=("Segoe UI", 11))
 entry_search.pack(side="left", padx=(0,6))
 def on_search():
     q = entry_search.get().strip()
-    # call genero crear botones? We'll implement a small search here
+    # llama a genero crear botones? We'll implement a small search here
     from modelos.sinopsis import mostrar_reseña_in_frame, crear_botones_search
     crear_botones_search(q, frame_items)
 ttk.Button(search_frame, text="Buscar", command=on_search).pack(side="left")
 
-# genre buttons and items area
+# generar botones y items area
 frame_generos = tk.Frame(main_area, bg="#1B1B1B")
 frame_generos.pack(fill="x", padx=12, pady=(6,12))
 
 frame_items = tk.Frame(main_area, bg="#1B1B1B")
 frame_items.pack(fill="both", expand=True, padx=12, pady=6)
 
-# Sidebar buttons
+# Sidebar botones
 ttk.Button(sidebar, text="Películas", style="Sidebar.TButton",
            command=lambda: mostrar_botones_generos("peliculas", frame_generos, frame_items, root)).pack(fill="x", padx=12, pady=6)
 ttk.Button(sidebar, text="Series", style="Sidebar.TButton",
            command=lambda: mostrar_botones_generos("series", frame_generos, frame_items, root)).pack(fill="x", padx=12, pady=6)
 
-# Favoritos: shows in a new window
+# Favoritos: mostrar en nueva ventana
 def open_favorites_window():
     favs = get_all()
     win = tk.Toplevel(root)
@@ -116,7 +116,7 @@ ttk.Button(sidebar, text="Favoritos", style="Sidebar.TButton", command=open_favo
 footer = tk.Label(sidebar, text="v1.1", bg="#111111", fg="#7a7a7a", font=("Segoe UI", 9))
 footer.pack(side="bottom", pady=12)
 
-# initial content
+# contenido inicial
 msg = tk.Label(frame_items, text="Selecciona Películas o Series en la barra izquierda", bg="#1B1B1B", fg="#cfcfcf", font=("Segoe UI", 12))
 msg.pack(pady=20)
 
