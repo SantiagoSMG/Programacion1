@@ -3,6 +3,7 @@ from tkinter import ttk
 from modelos.sinopsis import crear_botones
 from modelos.datos import catalogo_peliculas, catalogo_series
 
+#Le da fyncionalidad a los botones de los generos
 def mostrar_botones_generos(tipo, frame_botones, frame_items, parent):
     catalogo_actual = catalogo_peliculas if tipo == "peliculas" else catalogo_series
 

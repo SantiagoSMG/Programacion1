@@ -138,7 +138,7 @@ ttk.Button(sidebar, text="Favoritos", style="Sidebar.TButton", command=open_favo
     .pack(fill="x", padx=12, pady=6)
 
 # ---------------------------------------------------
-# ➤ NUEVOS BOTONES DE ESTADÍSTICAS (CSV + GRÁFICAS)
+# NUEVOS BOTONES DE ESTADÍSTICAS (CSV + GRÁFICAS)
 # ---------------------------------------------------
 
 ttk.Button(
