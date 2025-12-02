@@ -5,6 +5,7 @@ from modelos.datos import catalogo_peliculas, catalogo_series
 from modelos.genero import mostrar_botones_generos
 from modelos.favoritos import get_all, toggle_favorite, is_favorite, add_favorite, remove_favorite
 
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 ICON_PATH = os.path.join(ASSETS_DIR, "icon.png")
