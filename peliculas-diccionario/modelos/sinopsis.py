@@ -1,16 +1,15 @@
-from main import reseñas
-from tkinter import messagebox
 import tkinter as tk
+from tkinter import messagebox
+from modelos.datos import reseñas
 
-# Función para mostrar las reseñás de las peliculas y series 
+# Mostrar reseña de película o serie
 def mostrar_reseña(nombre):
     texto = reseñas.get(nombre, "Reseña no disponible.")
     messagebox.showinfo("Reseña", texto)
 
-
-# Función para crear botones de películas y series según categoría seleccionada
-def crear_botones_peliculas(genero, frame, catalogo):
-    # Limpia la lista anterior
+# Crear botones de películas/series según género
+def crear_botones(genero, frame, catalogo):
+    # Limpiar lista anterior
     for widget in frame.winfo_children():
         widget.destroy()
 
